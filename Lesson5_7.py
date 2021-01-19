@@ -1,4 +1,4 @@
-
+"""Создаем словарь фирм и их прибыль. Вычисляем среднею прибыль сохраняем в json """
 
 import json
 profit = {}
@@ -20,7 +20,7 @@ with open('less5_7.txt', 'r', encoding='utf-8') as f_r:
     pr = {'средняя прибыль': round(prof_aver)}
     profit.update(pr)
     print(f'Прибыль каждой Фирмы - {profit}')
-
+# Записываем в json
 with open('less5_7.json', 'w', encoding='utf-8') as write_js:
     json.dump(profit, write_js)
 
